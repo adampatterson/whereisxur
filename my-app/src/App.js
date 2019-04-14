@@ -16,7 +16,7 @@ class App extends Component {
     // `await` is an instruction to tell the JS to 'wait' until the API call has finished before
     // continuing on.
     const response = await fetch(
-      "https://bungie.net/Platform/Destiny2/Vendors/?components=400,402,401" ,
+      "https://www.bungie.net/Platform/Destiny2/Vendors/?components=400,402,401" ,
       { headers: { "X-API-Key": API_KEY } }  //config needed to pass through the API key
     );
 

@@ -9,6 +9,8 @@ class App extends Component {
     // Split our Xur code into it's own method. For technical reasons, it's needed for `await`
     // to work, but is also handy if we want to fetch xur at another time after the page loads
     this.getXur();
+     //idk what this really is, but josh said it's important
+     console.log('josh is a poop head')
   }
 
   async getXur() {

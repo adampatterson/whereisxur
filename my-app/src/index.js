@@ -1,12 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+const API_KEY = "e11fc97c6507401087d9544f2117c0ed";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+(async function() {
+    const response = await fetch(
+        "https://www.bungie.net/Platform/Destiny2/Vendors/?components=400,402,401/"
+        { headers: { "X-API-Key" : API_KEY } } // config needed to pass through API key
+    );
+    
+    // blah blah converts shit
+    const data = await response.json();
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    // then log it to the console
+    console.log(data);
+
+
+})();

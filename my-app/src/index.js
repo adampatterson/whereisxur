@@ -12,9 +12,15 @@ const API_KEY = "e11fc97c6507401087d9544f2117c0ed";
     // then log it to the console
     console.log(data);
 
-   // Response.sales.data[2190858386].saleItems
+    //const saleItems = response.json
 
-  // const saleItems = 
+    console.log(data.Response.sales.data[2190858386].saleItems);
+    
+   // const xurItems = data.Response.sales.data[2190858386].saleItems.vendorItemIndex.itemHash;
+
+   // Response.sales.data[2190858386].saleItems
+  
+
 
 
 

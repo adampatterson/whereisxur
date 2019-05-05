@@ -1,0 +1,13 @@
+.Block {
+  text-align: center;
+}
+.Label {
+  display: block;
+}
+.Separator {
+  padding: 0 10px;
+}
+.Xur-Countdown {
+  display: flex;
+  justify-content: flex-start;
+}

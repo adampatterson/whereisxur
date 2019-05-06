@@ -4,6 +4,7 @@ import InventoryItem from "./InventoryItem";
 const XUR_HASH = "2190858386";
 
 class XurInventory extends React.Component {
+  
   items = [];
   render() {
     const manifest = this.props.manifestContext.data;
@@ -27,3 +28,6 @@ class XurInventory extends React.Component {
   }
 }
 export default withManifestContext(XurInventory);
+
+
+//const displayCategory = xurDef.displayCategories[entry.displayCategoryIndex];

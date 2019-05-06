@@ -1,0 +1,7 @@
+.Xur-Inventory {
+  display: flex;
+  flex-direction: column;
+}
+.inventory-category {
+  display: flex;
+}

@@ -1,6 +1,22 @@
 import React from "react";
+import { withManifestContext } from "../providers/ManifestProvider";
 
-export default class InventoryItem extends React.Component {}
+class InventoryItem extends React.Component {
+  render() {
+    const manifest = this.props.manifestContext.data;
+    if (!manifest) {
+      return "";
+    }
+    const itemDef =
+      manifest.DestinyInventoryItemDefinition[this.props.data.itemHash];
+    console.log(this.props.data, itemDef);
+    return (
+      <div className="inventory-item">
+        <img src={"https://www.bungie.net" + itemDef.displayProperties.icon} />
+      </div>
+    );
+  }
+}
 
 // return (
 //     <div className="Xur-Countdown">
@@ -25,3 +41,4 @@ export default class InventoryItem extends React.Component {}
 //       </span>
 //     </div>
 //   );
+export default withManifestContext(InventoryItem);

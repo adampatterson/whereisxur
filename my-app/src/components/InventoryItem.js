@@ -12,7 +12,13 @@ class InventoryItem extends React.Component {
     console.log(this.props.data, itemDef);
     return (
       <div className="inventory-item">
-        <img src={"https://www.bungie.net" + itemDef.displayProperties.icon} />
+        <span
+          className="icon"
+          imgsrc={"https://www.bungie.net" + itemDef.displayProperties.icon}
+        >
+          {this.itemDef.displayProperties.name}
+        </span>
+        />
       </div>
     );
   }

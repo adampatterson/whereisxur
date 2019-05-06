@@ -8,7 +8,7 @@ export default class Xur extends React.Component {
     if (!data) {
       return "";
     }
-    console.log(data, "test");
+    console.log(data, "Xur.js line 11");
     return (
       <div className="Xur-Component">
         <div className="Left-Top">

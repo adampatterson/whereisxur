@@ -17,16 +17,18 @@ class XurInventory extends React.Component {
 
     console.log(categories, items, xurDef, "this is our initial array");
     return (
-      <div className="Xur-Inventory">
+      <div className="Xur-Inventory container">
         {/* iterating through categories (the vendor categories), */}
         {categories.map((category, categoryKey) => {
           const displayCategory =
             xurDef.displayCategories[category.displayCategoryIndex];
           // outputting the category block
           return (
-            <div key={categoryKey} className="inventory-category">
+            <div key={categoryKey} className="inventory-category row">
               {/* grabbing the category display name from xur's definition */}
-              <h3>{displayCategory.displayProperties.name}</h3>
+              <div className="col-md-12 mt-5">
+                  <h3>{displayCategory.displayProperties.name}</h3>
+              </div>
               {/* iterating through the itemIndex array and also gets the index position*/}
               {category.itemIndexes.map((itemIndex, itemKey) => {
                 const item = xurDef.itemList[itemIndex];
